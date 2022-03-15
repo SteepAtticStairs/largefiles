@@ -15379,6 +15379,12 @@ function submitGuess() {
     return word + tile.dataset.letter
   }, "")
 
+  if (guess == "mogus") {
+    showAlert(targetWord)
+    shakeTiles(activeTiles)
+    return
+  }
+
   if (!dictionary.includes(guess)) {
     showAlert("Not in word list")
     shakeTiles(activeTiles)
